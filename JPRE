@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>GBA Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+        }
+        #game-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="game"></div>
+    </div>
+
+    <script type="text/javascript">
+        EJS_player = '#game';
+        
+        // --- NÚCLEO PARA GBA ---
+        EJS_core = 'gb'; 
+        
+        // Ruta al archivo .gba dentro de esta misma carpeta
+        EJS_gameUrl = 'https://laguaridadeldragonstore.github.io/EMU/PK/RED/PKMN-R.gb';
+        
+        // Servidor del emulador
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        
+        // MOSTRAR BOTÓN DE INICIO (Esperar a que el usuario toque la pantalla)
+        EJS_startOnLoaded = false; 
+
+        // AJUSTES DE AUDIO Y RENDIMIENTO
+        EJS_threads = false;
+        EJS_forceLegacyAudio = true;
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>
